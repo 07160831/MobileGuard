@@ -40,7 +40,24 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".m2theftguard.ContactSelectActivity"></activity>
+        <activity android:name=".m2theftguard.ContactSelectActivity" />
+
+        <receiver
+            android:name=".m2theftguard.receiver.MyDeviceAdminReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".m2theftguard.receiver.SmsLostFindReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".m2theftguard.service.GPSLocationService"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name="xml.device_admin_sample"
+            android:enabled="true"
+            android:exported="true" />
     </application>
 
 </manifest>
