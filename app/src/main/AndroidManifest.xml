@@ -75,7 +75,7 @@
                 <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
             </intent-filter>
         </receiver>
-        <!--通讯卫士部分-->
+            <!--通讯卫士部分-->
         <activity android:name=".m3communicationguard.AddBlackNumberActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity android:name=".m3communicationguard.SecurityPhoneActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
 
