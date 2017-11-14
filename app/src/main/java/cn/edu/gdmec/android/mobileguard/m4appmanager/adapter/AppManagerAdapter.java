@@ -61,6 +61,7 @@ public class AppManagerAdapter extends BaseAdapter {
         return appInfo;
     }
 
+
     @Override
     public long getItemId(int position) {
         return 0;
