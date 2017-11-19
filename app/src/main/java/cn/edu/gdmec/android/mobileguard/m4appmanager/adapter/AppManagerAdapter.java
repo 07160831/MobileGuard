@@ -61,6 +61,7 @@ public class AppManagerAdapter extends BaseAdapter {
         return appInfo;
     }
 
+
     @Override
     public long getItemId(int position) {
         return 0;
@@ -90,6 +91,7 @@ public class AppManagerAdapter extends BaseAdapter {
         }else {
             viewHolder = new ViewHolder();
             view =View.inflate(context,R.layout.item_appmanager_list,null);
+            viewHolder.mAbouticon1TV = (TextView) view.findViewById(R.id.tv_abouticon1_app);
             viewHolder.mAbouticonTV = (TextView) view.findViewById(R.id.tv_abouticon_app);
             viewHolder.mAppIconImgv = (ImageView) view.findViewById(R.id.imgv_appicon);
             viewHolder.mAppLocationTV = (TextView) view.findViewById(R.id.tv_appisroom);
@@ -120,6 +122,7 @@ public class AppManagerAdapter extends BaseAdapter {
             viewHolder.mShareAppTV.setOnClickListener(listener);
             viewHolder.mUninstallTV.setOnClickListener(listener);
             viewHolder.mAbouticonTV.setOnClickListener(listener);
+            viewHolder.mAbouticon1TV.setOnClickListener(listener);
         }
         return view;
     }
@@ -135,6 +138,7 @@ public class AppManagerAdapter extends BaseAdapter {
         return tv;
     }
     static class ViewHolder {
+        TextView mAbouticon1TV;
         TextView mAbouticonTV;
         TextView mLuanchAppTV;
         TextView mUninstallTV;
@@ -174,6 +178,9 @@ public class AppManagerAdapter extends BaseAdapter {
                     break;
                 case R.id.tv_abouticon_app:
                     EngineUtils.AbouticonAppDetail(context,appInfo);
+                    break;
+                case R.id.tv_abouticon1_app:
+                    EngineUtils.ActivityInfo(context,appInfo);
                     break;
             }
         }
