@@ -99,11 +99,12 @@
             android:layout_height="match_parent"
             android:background="@color/black30"/>
         <TextView
-            android:id="@+id/tv_abouticon1_app"
+            android:id="@+id/tv_activityicon_app"
             style="@style/tvyellow14sp"
             android:drawableTop="@drawable/activityicon_yellow_n"
             android:text="活动"
             />
+
     </LinearLayout>
 
 </LinearLayout>

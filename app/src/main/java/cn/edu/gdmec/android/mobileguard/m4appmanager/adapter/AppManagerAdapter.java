@@ -61,8 +61,7 @@ public class AppManagerAdapter extends BaseAdapter {
         return appInfo;
     }
 
-
-    @Override
+     @Override
     public long getItemId(int position) {
         return 0;
     }
@@ -91,7 +90,6 @@ public class AppManagerAdapter extends BaseAdapter {
         }else {
             viewHolder = new ViewHolder();
             view =View.inflate(context,R.layout.item_appmanager_list,null);
-            viewHolder.mAbouticon1TV = (TextView) view.findViewById(R.id.tv_abouticon1_app);
             viewHolder.mAbouticonTV = (TextView) view.findViewById(R.id.tv_abouticon_app);
             viewHolder.mAppIconImgv = (ImageView) view.findViewById(R.id.imgv_appicon);
             viewHolder.mAppLocationTV = (TextView) view.findViewById(R.id.tv_appisroom);
@@ -102,6 +100,7 @@ public class AppManagerAdapter extends BaseAdapter {
             viewHolder.mShareAppTV = (TextView) view.findViewById(R.id.tv_share_app);
             viewHolder.mUninstallTV = (TextView) view.findViewById(R.id.tv_uninstall_app);
             viewHolder.mAppOptionLL = (LinearLayout) view.findViewById(R.id.ll_option_app);
+            viewHolder.mActivityInfo = (TextView) view.findViewById(R.id.tv_activityicon_app);
             view.setTag(viewHolder);
         }
         if (appInfo != null){
@@ -122,7 +121,7 @@ public class AppManagerAdapter extends BaseAdapter {
             viewHolder.mShareAppTV.setOnClickListener(listener);
             viewHolder.mUninstallTV.setOnClickListener(listener);
             viewHolder.mAbouticonTV.setOnClickListener(listener);
-            viewHolder.mAbouticon1TV.setOnClickListener(listener);
+            viewHolder.mActivityInfo.setOnClickListener(listener);
         }
         return view;
     }
@@ -138,7 +137,6 @@ public class AppManagerAdapter extends BaseAdapter {
         return tv;
     }
     static class ViewHolder {
-        TextView mAbouticon1TV;
         TextView mAbouticonTV;
         TextView mLuanchAppTV;
         TextView mUninstallTV;
@@ -148,6 +146,7 @@ public class AppManagerAdapter extends BaseAdapter {
         TextView mAppLocationTV;
         TextView mAppSizeTV;
         TextView mAppNameTV;
+        TextView mActivityInfo;
         LinearLayout mAppOptionLL;
     }
     class MyClickListener implements View.OnClickListener{
@@ -179,7 +178,7 @@ public class AppManagerAdapter extends BaseAdapter {
                 case R.id.tv_abouticon_app:
                     EngineUtils.AbouticonAppDetail(context,appInfo);
                     break;
-                case R.id.tv_abouticon1_app:
+                case R.id.tv_activityicon_app:
                     EngineUtils.ActivityInfo(context,appInfo);
                     break;
             }
