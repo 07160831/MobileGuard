@@ -125,6 +125,7 @@ public class VirusScanSpeedActivity extends AppCompatActivity implements View.On
             RestfulTask restfulTask = new RestfulTask();
             restfulTask.execute(scanInfo);
 
+
         }
 
     }
