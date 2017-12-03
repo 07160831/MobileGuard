@@ -36,6 +36,7 @@ public class TrafficMonitoringActivity extends AppCompatActivity implements View
     private TextView mRemindTV;
     private CorrectFlowReceiver receiver;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
