@@ -53,6 +53,7 @@ public class TrafficMonitoringActivity extends AppCompatActivity implements View
         initView();
         registReceiver();
         initData();
+
     }
 
     private void initData() {
