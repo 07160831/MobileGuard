@@ -83,7 +83,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"/>
         <TextView
-            android:id="@+id/tv_allscan1"
+            android:id="@+id/tv_cloudscan"
             style="@style/textview16sp"
             android:layout_toRightOf="@+id/imgv_cloudscan"
             android:layout_marginLeft="15dp"
@@ -91,11 +91,11 @@
             android:text="云查杀"/>
         <TextView
             style="@style/textview14sp"
-            android:layout_below="@+id/tv_allscan1"
+            android:layout_below="@+id/tv_cloudscan"
             android:layout_marginLeft="15dp"
             android:layout_toRightOf="@+id/imgv_cloudscan"
             android:layout_marginTop="10dp"
-            android:text="云查杀，杀毒更安全"/>
+            android:text="云查杀，杀毒更全面"/>
         <View
             android:layout_width="13dp"
             android:layout_height="20dp"
