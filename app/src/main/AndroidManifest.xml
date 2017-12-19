@@ -103,25 +103,29 @@
             </intent-filter>
         </receiver>
 
-        <activity
-            android:name=".m4appmanager.AppManagerActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity
-            android:name=".m5virusscan.VirusScanSpeedActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity
-            android:name=".m5virusscan.VirusScanActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".m6cleancache.CacheClearListActivity" />
-        <activity android:name=".m6cleancache.CleanCacheActivity" />
-
-        <receiver
-            android:name=".m8trafficmonitor.reciever.BootCompleteReciever"
-            android:enabled="true"
-            android:exported="true" />
-
-        <activity android:name=".m8trafficmonitor.OperatorSetActivity" />
-        <activity android:name=".m8trafficmonitor.TrafficMonitoringActivity"></activity>
+        <!--软件管家部分-->
+        <activity android:name=".m4appmanager.AppManagerActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!--杀毒软件部分-->
+        <activity android:name=".m5virusscan.VirusScanActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".m5virusscan.VirusScanSpeedActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!--缓存清理部分-->
+        <activity android:name=".m6cleancache.CacheClearListActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".m6cleancache.CleanCacheActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!--流量统计-->
+        <activity android:name=".m8trafficmonitor.OperatorSetActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".m8trafficmonitor.TrafficMonitoringActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!--号码归属地-->
+        <activity android:name=".m9advancedtools.AdvancedToolsActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".m9advancedtools.NumBelongtoActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
     </application>
 
 </manifest>
