@@ -13,6 +13,7 @@ import android.util.Log;
  */
 
 public class App extends Application {
+
     //添加变量
     public static final String APPLOCK_ACTION = "cn.edu.gdmec.android.mobileguard.m9advancedtools.applock";
     public static final String APPLOCK_CONTENT_URI = "content://cn.edu.gdmec.android.mobileguard.m9advancedtools.applock";
