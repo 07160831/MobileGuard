@@ -36,9 +36,9 @@ public class TrafficMonitoringActivity extends AppCompatActivity implements View
     private TextView mRemindTV;
     private CorrectFlowReceiver receiver;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_traffic_monitoring);
         mSP = getSharedPreferences("config",MODE_PRIVATE);
@@ -54,7 +54,6 @@ public class TrafficMonitoringActivity extends AppCompatActivity implements View
         initView();
         registReceiver();
         initData();
-
     }
 
     private void initData() {
@@ -125,15 +124,14 @@ public class TrafficMonitoringActivity extends AppCompatActivity implements View
                     case 0:
                         Toast.makeText(this, "您还没有设置运营商信息", Toast.LENGTH_SHORT).show();
                         break;
-                    //中国移动
+                        //中国移动
                     case 1:
                         smsManager.sendTextMessage("10086",null,"CXLL",null,null);
                         break;
                     case 2://联通
-                        smsManager.sendTextMessage("10010",null,"CXLL",null,null);
+//                        smsManager.sendTextMessage("10010",null,"CXLL",null,null);
                         break;
                     case 3://电信
-                        smsManager.sendTextMessage("10001",null,"CXLL",null,null);
                         break;
                 }
         }
@@ -151,8 +149,11 @@ public class TrafficMonitoringActivity extends AppCompatActivity implements View
                 if (!address.equals("10086")){
                     return;
                 }
-                String[] split = body.split(",");
-                System.out.println(split[0]);
+                String[] split = body.split("，");
+                for (String s:split
+                     ) {
+                    System.out.println(s+"......");
+                }
                 long left = 0;
                 long used = 0;
                 long beyond = 0;
@@ -188,7 +189,7 @@ public class TrafficMonitoringActivity extends AppCompatActivity implements View
                 float m = Float.parseFloat(split[0]);
                 flow = (long) (m*1024);
             }else if (str.contains("M")){
-                String[] split = str.split("K");
+                String[] split = str.split("M");
                 float m = Float.parseFloat(split[0]);
                 flow = (long) (m*1024*1024);
             }else if (str.contains("G")){
