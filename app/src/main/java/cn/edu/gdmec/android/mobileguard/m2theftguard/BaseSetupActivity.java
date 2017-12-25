@@ -68,7 +68,6 @@ public abstract class BaseSetupActivity extends AppCompatActivity {
                 }
 
                 return super.onFling(e1, e2, velocityX, velocityY);
-                //
             }
         });
 

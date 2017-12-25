@@ -62,14 +62,15 @@ public class EngineUtils {
     }
 
     public static void AbouticonAppDetail(Context context,AppInfo appInfo){
-        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        final AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setTitle(appInfo.appName);
         builder.setMessage("Version："+appInfo.version+
                             "\nInstall time："+appInfo.installTime+
                                 "\nCertificate issuer："+appInfo.certifi+
                                     "\n\nPermissions："+appInfo.permisstion);
-        builder.setPositiveButton("确定",new DialogInterface.OnClickListener(){
-            public void onClick(DialogInterface dialogInterface,int i){
+        builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
                 dialogInterface.dismiss();
             }
         });
@@ -77,17 +78,17 @@ public class EngineUtils {
         dialog.show();
     }
 
-    public static void ActivityInfo(Context context,AppInfo appInfo){
-        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+    public static void ActivityInfoDetail(Context context, AppInfo appInfo) {
+        final AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setTitle(appInfo.appName);
-        builder.setMessage("activity:" + appInfo.activityInfo);
-        builder.setPositiveButton("确定",new DialogInterface.OnClickListener(){
-            public void onClick(DialogInterface dialogInterface,int i){
+        builder.setMessage("activities:"+appInfo.activityInfo);
+        builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
                 dialogInterface.dismiss();
             }
         });
         AlertDialog dialog =  builder.create();
         dialog.show();
-
     }
 }

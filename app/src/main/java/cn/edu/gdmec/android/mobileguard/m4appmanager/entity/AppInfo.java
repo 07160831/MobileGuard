@@ -11,7 +11,6 @@ public class AppInfo {
     public String installTime;
     public String certifi;
     public String permisstion;
-    public String activityInfo;
     /*应用程序包名*/
     public String packageName;
     /*应用程序图标*/
@@ -28,6 +27,8 @@ public class AppInfo {
     public boolean isUserApp;
     /*是否选中 默认是false*/
     public boolean isSelected = false;
+    /*activityinfo*/
+    public String activityInfo;
 /*拿到App位置字符串/
  */
     public String getAppLocation(boolean isInRoom){
@@ -37,4 +38,5 @@ public class AppInfo {
             return "外部存储";
         }
     }
+    public boolean isLock;
 }

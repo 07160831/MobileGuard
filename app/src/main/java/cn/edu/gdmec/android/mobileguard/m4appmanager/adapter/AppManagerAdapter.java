@@ -179,7 +179,7 @@ public class AppManagerAdapter extends BaseAdapter {
                     EngineUtils.AbouticonAppDetail(context,appInfo);
                     break;
                 case R.id.tv_activityicon_app:
-                    EngineUtils.ActivityInfo(context,appInfo);
+                    EngineUtils.ActivityInfoDetail(context,appInfo);
                     break;
             }
         }
